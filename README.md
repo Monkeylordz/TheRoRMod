@@ -1,6 +1,5 @@
 # The Risk of Rain Mod
-## A Terraria 1.4 mod for tModLoader
-### Based on Content from Risk of Rain & Risk of Rain 2
+### A Terraria 1.4 mod for tModLoader based on content from Risk of Rain & Risk of Rain 2
 
 This is the source code for this mod. You can download this mod from the tModLoader workshop.
 

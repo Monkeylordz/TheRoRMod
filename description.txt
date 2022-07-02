@@ -1,4 +1,4 @@
-The Risk of Rain Mod adds in a ton of new and unique weapons and accessories inspired by items from the game Risk of Rain (2013).
+The Risk of Rain Mod adds in a ton of new and unique weapons and accessories based on items from the games Risk of Rain and Risk of Rain 2.
 
 Many of these items have powerful on-hit or on-kill effects, and will be excellent additions to your combat arsenal. 
 Damage-based accessories scale with the damage that you deal, meaning that they can be useful anytime during your playthrough. Weapons from this mod are based on your base damage, which is a new damage value based on your player's stats and boss progression.

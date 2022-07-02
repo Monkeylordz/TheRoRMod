@@ -59,7 +59,14 @@ namespace RoRMod.Content.Items.Weapons
         public override void OnHitNPC(Player player, NPC target, int damage, float knockBack, bool crit)
         {
             BuffableNPC buffableNPC = target.GetGlobalNPC<BuffableNPC>();
-            buffableNPC.Buffs.AddBuff(new ShatteredArmorBuff(buffableNPC, ShatterDuration));
+            if (buffableNPC.Buffs.TryGetBuff(out ShatteredArmorBuff buff))
+            {
+                buff.Apply(ShatterDuration);
+            }
+            else
+            {
+                buffableNPC.Buffs.AddBuff(new ShatteredArmorBuff(buffableNPC, ShatterDuration));
+            }
         }
 
         public override void UpdateAccessory(Player player, bool hideVisual)
@@ -73,13 +80,20 @@ namespace RoRMod.Content.Items.Weapons
     {
         public override void OnHit(NPC target, int damage, float knockback, bool crit)
         {
-            // Shattering Justice: Shatter Armor at 10% chance
+            // Shattering Justice: Shatter Armor at 15% chance
             if (AccessoryEquipped)
             {
-                if (PlayerUtils.ChanceRoll(Player, 0.10f))
+                if (PlayerUtils.ChanceRoll(Player, 0.15f))
                 {
                     BuffableNPC buffableNPC = target.GetGlobalNPC<BuffableNPC>();
-                    buffableNPC.Buffs.AddBuff(new ShatteredArmorBuff(buffableNPC, ShatteringJustice.ShatterDuration));
+                    if (buffableNPC.Buffs.TryGetBuff(out ShatteredArmorBuff buff))
+                    {
+                        buff.Apply(ShatteringJustice.ShatterDuration);
+                    }
+                    else
+                    {
+                        buffableNPC.Buffs.AddBuff(new ShatteredArmorBuff(buffableNPC, ShatteringJustice.ShatterDuration));
+                    }
                 }
             }
         }
