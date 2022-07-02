@@ -1,0 +1,11 @@
+# Image and Sound Assets
+*.png
+Assets/Sounds
+
+# Visual Studio
+.vs/
+*.user
+
+# Build
+bin/
+obj/

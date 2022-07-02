@@ -1,0 +1,3 @@
+displayName = The Risk of Rain Mod
+author = Monkeylordz
+version = 0.1
